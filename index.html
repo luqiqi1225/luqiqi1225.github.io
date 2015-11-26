@@ -261,7 +261,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/26/HTML和CSS2的知识点梳理/">HTML和CSS2的知识点梳理</a>
+      <a class="article-title" href="/2015/11/26/HTML和CSS2的知识点梳理/">HTML的知识点梳理</a>
     </h1>
   
 
@@ -355,6 +355,52 @@
 </code></pre><p>块级标签，不设置宽高时，继承父级宽高；margin、padding有效，宽高有效，有默认宽度、border，背景有效。</p>
 <p>有默认的margin，如何去掉默认属性？</p>
 <pre><code><span class="tag">h1</span>,<span class="tag">h2</span>,<span class="tag">h3</span>,<span class="tag">h4</span>,<span class="tag">h5</span>,<span class="tag">h6</span><span class="rules">{<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>;}</span>
+</code></pre><h3 id="⑧列表标签">⑧列表标签</h3><pre><code>有序列表,ol和li必须成套使用,ol为列表,li为列表项
+<span class="tag">&lt;<span class="title">ol</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ol</span>&gt;</span>
+无序列表,属性同ol
+<span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+字典列表或者自定义列表
+<span class="tag">&lt;<span class="title">dl</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>美女：<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>颜值很高的女性<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>豆芽：<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>好吃的豆芽<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>前端开发工程师：<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>一种致力于人类发展的伟大职业<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
+</code></pre><h3 id="⑨表格标签">⑨表格标签</h3><pre><code><span class="tag">&lt;<span class="title">table</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">caption</span>&gt;</span><span class="tag">&lt;/<span class="title">caption</span>&gt;</span> <span class="comment">&lt;!-- caption定义表格标题，非必须标签 --&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span><span class="tag">&lt;/<span class="title">th</span>&gt;</span> <span class="comment">&lt;!-- 默认上下左右都居中 --&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+</code></pre><p>border-collapse：collapse;合并表格边框 separate;默认值<br>border-spacing:0px 0px;设置相邻单元格的边框间的距离；（第一个值表示左右，第二个值表示上下，可以为1个值，表示上下左右）</p>
+<p>colspan 1 向右合并1格</p>
+<p>rowspan 1 向下合并1格<br>vertical-align:top/middle/bottom;文本垂直方向 上/居中/下</p>
+<p>text-align:left/center/right;文本方向 左/中/右</p>
+<h3 id="⑩一些其他标签">⑩一些其他标签</h3><pre><code><span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>强调
+<span class="tag">&lt;<span class="title">em</span>&gt;</span><span class="tag">&lt;/<span class="title">em</span>&gt;</span>强调，突出内容，代替i标签
+<span class="tag">&lt;<span class="title">b</span>&gt;</span><span class="tag">&lt;/<span class="title">b</span>&gt;</span>强调，突出内容（加粗）
+<span class="tag">&lt;<span class="title">strong</span>&gt;</span><span class="tag">&lt;/<span class="title">strong</span>&gt;</span>强调，突出内容，代替b标签
+<span class="tag">&lt;<span class="title">sub</span>&gt;</span><span class="tag">&lt;/<span class="title">sub</span>&gt;</span>下标字
+<span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span>上标字
+<span class="tag">&lt;<span class="title">del</span>&gt;</span><span class="tag">&lt;/<span class="title">del</span>&gt;</span>定义删除字
+<span class="tag">&lt;<span class="title">code</span>&gt;</span><span class="tag">&lt;/<span class="title">code</span>&gt;</span>
+<span class="tag">&lt;<span class="title">small</span>&gt;</span><span class="tag">&lt;/<span class="title">small</span>&gt;</span>小字体
+<span class="tag">&lt;<span class="title">big</span>&gt;</span><span class="tag">&lt;/<span class="title">big</span>&gt;</span>大字体
+<span class="tag">&lt;<span class="title">var</span>&gt;</span><span class="tag">&lt;/<span class="title">var</span>&gt;</span>
+<span class="tag">&lt;<span class="title">object</span>&gt;</span><span class="tag">&lt;/<span class="title">object</span>&gt;</span>    
 </code></pre>
       
     </div>

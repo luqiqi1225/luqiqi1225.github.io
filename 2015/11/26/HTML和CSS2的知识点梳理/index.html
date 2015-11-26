@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>HTML和CSS2的知识点梳理 | 琦小琦的小窝</title>
+  <title>HTML的知识点梳理 | 琦小琦的小窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="纯属自己整理，如有错误，欢迎在留言板指出
 编辑器目前为止我只接触了一个Sublime Text这个编辑器,没有安装任何插件，都是手动敲代码，以后还会接触一些其他的编辑器，我很期待哟～
@@ -13,7 +13,7 @@ ls 查看当前的文件（当前文件的内容）
 pwd 查看当前路径 
 mkdir 创建文件夹 （例：mkdir web 创建一个叫web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML和CSS2的知识点梳理">
+<meta property="og:title" content="HTML的知识点梳理">
 <meta property="og:url" content="http://yoursite.com/2015/11/26/HTML和CSS2的知识点梳理/index.html">
 <meta property="og:site_name" content="琦小琦的小窝">
 <meta property="og:description" content="纯属自己整理，如有错误，欢迎在留言板指出
@@ -23,9 +23,9 @@ cd .. 返回上一级
 ls 查看当前的文件（当前文件的内容）
 pwd 查看当前路径 
 mkdir 创建文件夹 （例：mkdir web 创建一个叫web">
-<meta property="og:updated_time" content="2015-11-26T12:38:14.000Z">
+<meta property="og:updated_time" content="2015-11-26T13:11:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML和CSS2的知识点梳理">
+<meta name="twitter:title" content="HTML的知识点梳理">
 <meta name="twitter:description" content="纯属自己整理，如有错误，欢迎在留言板指出
 编辑器目前为止我只接触了一个Sublime Text这个编辑器,没有安装任何插件，都是手动敲代码，以后还会接触一些其他的编辑器，我很期待哟～
 终端命令cd 进入 （例：cd Desktop/ 进入桌面）
@@ -278,7 +278,7 @@ mkdir 创建文件夹 （例：mkdir web 创建一个叫web">
         
   
     <h1 class="article-title" itemprop="name">
-      HTML和CSS2的知识点梳理
+      HTML的知识点梳理
     </h1>
   
 
@@ -379,6 +379,52 @@ mkdir 创建文件夹 （例：mkdir web 创建一个叫web">
 </code></pre><p>块级标签，不设置宽高时，继承父级宽高；margin、padding有效，宽高有效，有默认宽度、border，背景有效。</p>
 <p>有默认的margin，如何去掉默认属性？</p>
 <pre><code><span class="tag">h1</span>,<span class="tag">h2</span>,<span class="tag">h3</span>,<span class="tag">h4</span>,<span class="tag">h5</span>,<span class="tag">h6</span><span class="rules">{<span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>;}</span>
+</code></pre><h3 id="⑧列表标签">⑧列表标签</h3><pre><code>有序列表,ol和li必须成套使用,ol为列表,li为列表项
+<span class="tag">&lt;<span class="title">ol</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ol</span>&gt;</span>
+无序列表,属性同ol
+<span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表1<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表2<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>列表3<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+字典列表或者自定义列表
+<span class="tag">&lt;<span class="title">dl</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>美女：<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>颜值很高的女性<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>豆芽：<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>好吃的豆芽<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dt</span>&gt;</span>前端开发工程师：<span class="tag">&lt;/<span class="title">dt</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span>&gt;</span>一种致力于人类发展的伟大职业<span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
+</code></pre><h3 id="⑨表格标签">⑨表格标签</h3><pre><code><span class="tag">&lt;<span class="title">table</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">caption</span>&gt;</span><span class="tag">&lt;/<span class="title">caption</span>&gt;</span> <span class="comment">&lt;!-- caption定义表格标题，非必须标签 --&gt;</span>
+    <span class="tag">&lt;<span class="title">tbody</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">th</span>&gt;</span><span class="tag">&lt;/<span class="title">th</span>&gt;</span> <span class="comment">&lt;!-- 默认上下左右都居中 --&gt;</span>
+            <span class="tag">&lt;<span class="title">td</span>&gt;</span><span class="tag">&lt;/<span class="title">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">tr</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">tbody</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">table</span>&gt;</span>
+</code></pre><p>border-collapse：collapse;合并表格边框 separate;默认值<br>border-spacing:0px 0px;设置相邻单元格的边框间的距离；（第一个值表示左右，第二个值表示上下，可以为1个值，表示上下左右）</p>
+<p>colspan 1 向右合并1格</p>
+<p>rowspan 1 向下合并1格<br>vertical-align:top/middle/bottom;文本垂直方向 上/居中/下</p>
+<p>text-align:left/center/right;文本方向 左/中/右</p>
+<h3 id="⑩一些其他标签">⑩一些其他标签</h3><pre><code><span class="tag">&lt;<span class="title">i</span>&gt;</span><span class="tag">&lt;/<span class="title">i</span>&gt;</span>强调
+<span class="tag">&lt;<span class="title">em</span>&gt;</span><span class="tag">&lt;/<span class="title">em</span>&gt;</span>强调，突出内容，代替i标签
+<span class="tag">&lt;<span class="title">b</span>&gt;</span><span class="tag">&lt;/<span class="title">b</span>&gt;</span>强调，突出内容（加粗）
+<span class="tag">&lt;<span class="title">strong</span>&gt;</span><span class="tag">&lt;/<span class="title">strong</span>&gt;</span>强调，突出内容，代替b标签
+<span class="tag">&lt;<span class="title">sub</span>&gt;</span><span class="tag">&lt;/<span class="title">sub</span>&gt;</span>下标字
+<span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span>上标字
+<span class="tag">&lt;<span class="title">del</span>&gt;</span><span class="tag">&lt;/<span class="title">del</span>&gt;</span>定义删除字
+<span class="tag">&lt;<span class="title">code</span>&gt;</span><span class="tag">&lt;/<span class="title">code</span>&gt;</span>
+<span class="tag">&lt;<span class="title">small</span>&gt;</span><span class="tag">&lt;/<span class="title">small</span>&gt;</span>小字体
+<span class="tag">&lt;<span class="title">big</span>&gt;</span><span class="tag">&lt;/<span class="title">big</span>&gt;</span>大字体
+<span class="tag">&lt;<span class="title">var</span>&gt;</span><span class="tag">&lt;/<span class="title">var</span>&gt;</span>
+<span class="tag">&lt;<span class="title">object</span>&gt;</span><span class="tag">&lt;/<span class="title">object</span>&gt;</span>    
 </code></pre>
       
     </div>
@@ -419,7 +465,7 @@ mkdir 创建文件夹 （例：mkdir web 创建一个叫web">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="HTML和CSS2的知识点梳理" data-title="HTML和CSS2的知识点梳理" data-url="http://yoursite.com/2015/11/26/HTML和CSS2的知识点梳理/"></div>
+	<div class="ds-thread" data-thread-key="HTML和CSS2的知识点梳理" data-title="HTML的知识点梳理" data-url="http://yoursite.com/2015/11/26/HTML和CSS2的知识点梳理/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
