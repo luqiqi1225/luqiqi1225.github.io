@@ -4,14 +4,16 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>呆萌小程序媛之日常 | 琦小琦的小窝</title>
+    <title>HTML和CSS2的知识点梳理 | 琦小琦的小窝</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="陆琦">
     
-    <meta name="description" content="#心情分享：嘿嘿…第一篇正儿八经的博客，先随便分享点心情。
-来大向海学习h5也已经一个多月了，在这一个多月中，我学到了很多新知识，仅仅一个月的时间，就让我对以后的工作充满期待，好想快点学完，去拥抱属于我的未来～
-在这里我结识了很多新的朋友，结识了我的老师，我的老师可牛逼了，是从阿里巴巴出来的，来这里">
+    <meta name="description" content="##编辑器：目前为止我只接触了一个Sublime Text这个编辑器,没有安装任何插件，都是手动敲代码，以后还会接触一些其他的编辑器，我很期待哟～
+##终端命令cd 进入 （例：cd Desktop/ 进入桌面）
+cd .. 返回上一级
+ls 查看当前的文件（当前文件的内容）
+pwd 查看当前路径 ">
     
     
     
@@ -67,15 +69,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/11/25/已掌握的HTML和CSS知识点整理/" title="呆萌小程序媛之日常" itemprop="url">呆萌小程序媛之日常</a>
+      <a href="/2015/11/26/HTML和CSS2的知识点梳理/" title="HTML和CSS2的知识点梳理" itemprop="url">HTML和CSS2的知识点梳理</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="陆琦">陆琦</a>
     </p>
   <p class="article-time">
-    <time datetime="2015-11-25T12:16:55.000Z" itemprop="datePublished">2015-11-25</time>
-    更新日期:<time datetime="2015-11-26T01:23:53.000Z" itemprop="dateModified">2015-11-26</time>
+    <time datetime="2015-11-26T01:30:30.000Z" itemprop="datePublished">2015-11-26</time>
+    更新日期:<time datetime="2015-11-26T02:18:24.000Z" itemprop="dateModified">2015-11-26</time>
     
   </p>
 </header>
@@ -87,11 +89,53 @@
 		
 		</div>
 		
-		<p>#心情分享：<br>嘿嘿…第一篇正儿八经的博客，先随便分享点心情。</p>
-<p>来大向海学习h5也已经一个多月了，在这一个多月中，我学到了很多新知识，仅仅一个月的时间，就让我对以后的工作充满期待，好想快点学完，去拥抱属于我的未来～</p>
-<p>在这里我结识了很多新的朋友，结识了我的老师，我的老师可牛逼了，是从阿里巴巴出来的，来这里学习的大部分原因就是因为这个，嘿嘿…</p>
-<p>在这里我不仅要分享我的学习，也会一起分享我的心情、我的趣事，让你们从博客中了解我。</p>
-  
+		<p>##编辑器：<br>目前为止我只接触了一个Sublime Text这个编辑器,没有安装任何插件，都是手动敲代码，以后还会接触一些其他的编辑器，我很期待哟～</p>
+<p>##终端命令<br>cd 进入 （例：cd Desktop/ 进入桌面）</p>
+<p>cd .. 返回上一级</p>
+<p>ls 查看当前的文件（当前文件的内容）</p>
+<p>pwd 查看当前路径 </p>
+<p>mkdir 创建文件夹 （例：mkdir web 创建一个叫web的文件夹）</p>
+<p>touch 创建文件（例：touch index.html 创建一个叫index的html文件）</p>
+<p>*注：文件夹不要用中文，文件名称不要用中文</p>
+<p>##MAC系统下一些常用的快捷键<br>command + +放大字体</p>
+<p>command + -缩小字体</p>
+<p>command + L选取整行</p>
+<p>command + KK删除光标处后面的内容，对上一行和下一行内容无影响</p>
+<p>command + j 合并行</p>
+<p>command + / 注释</p>
+<p>command +S保存</p>
+<p>command +N 新建文档</p>
+<p>command +Z 回退</p>
+<p>command +shift+P 命令板</p>
+<p>CTRL+`console命令行（调试器）</p>
+<p>command +↑返回上级菜单</p>
+<p>alt + command +i打开开发者工具</p>
+<p>tab缩进</p>
+<p>command+Q关闭应用</p>
+<p>command+shift+3全屏截图</p>
+<p>command+shift+4区域截图</p>
+<p>command + 空格 切换输入法</p>
+<p>command +，打开工具偏好设置</p>
+<p>*注：在MAC系统下 ”整理“就是刷新，”强制退出“就是任务管理器，page(word)、number（Excel）、Keynote(PPT)</p>
+<p>##HTML（超文本标记语言）<br>!doctype不是一个标签，它是告诉浏览器用什么版本解析（是头文档声明）</p>
+<p>html文档标准：</p>
+<p>1.所有的标签属性命名都要用小写，属性值用双引号；</p>
+<p>2.html文档包括两部分：head和body；</p>
+<p>3.head必须要有title，和编码格式；</p>
+<p>4.所有可见内容都要放在body里面</p>
+<p>*下面是一个完整的html的基本格式：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>/&gt;</span><span class="comment">&lt;!-- 代码编码格式，用中文的意思，不然会出现乱码 --&gt;</span>
+      <span class="tag">&lt;<span class="title">title</span>&gt;</span>标题<span class="tag">&lt;/<span class="title">title</span>&gt;</span>    
+      <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span> <span class="attribute">href</span>=<span class="value">"css样式表的路径"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>我是一个div，是个块级标签，表示一块区域<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -100,7 +144,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2015/11/25/已掌握的HTML和CSS知识点整理/" data-title="呆萌小程序媛之日常 | 琦小琦的小窝" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2015/11/26/HTML和CSS2的知识点梳理/" data-title="HTML和CSS2的知识点梳理 | 琦小琦的小窝" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -109,19 +153,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/11/26/HTML和CSS2的知识点梳理/" title="HTML和CSS2的知识点梳理">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  HTML和CSS2的知识点梳理</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/11/25/新的开始/"  title="新的开始">
+<a href="/2015/11/25/已掌握的HTML和CSS知识点整理/"  title="呆萌小程序媛之日常">
  <strong>NEXT:</strong><br/> 
- <span>新的开始
+ <span>呆萌小程序媛之日常
 </span>
 </a>
 </div>
