@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>琦小琦的小窝</title>
+  <title>JavaScript基础之作用域解析 | 琦小琦的小窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习的点滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="琦小琦的小窝">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="最近这些天都在搞博客，韩欧巴并没有讲什么新的知识点，所以感觉挺轻松的，没有什么学习压力，过得挺舒服（感觉现在说舒服好不合时宜啊）…今天终于讲了一些新的JS知识。其实，我对js一直都挺害怕的，害怕自己学不好，之前韩欧巴讲js，我感觉不是很懂，就很排斥它，很沮丧…甚至和很多同学开玩笑说我要退学了，感觉自己不是走前端这条路的，不过同学都很耐心的劝我不要放弃，说会帮助我，我心底还是很happy的…所以我会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础之作用域解析">
+<meta property="og:url" content="http://yoursite.com/2015/11/27/JavaScript基础之作用域解析/index.html">
 <meta property="og:site_name" content="琦小琦的小窝">
-<meta property="og:description" content="记录学习的点滴">
+<meta property="og:description" content="最近这些天都在搞博客，韩欧巴并没有讲什么新的知识点，所以感觉挺轻松的，没有什么学习压力，过得挺舒服（感觉现在说舒服好不合时宜啊）…今天终于讲了一些新的JS知识。其实，我对js一直都挺害怕的，害怕自己学不好，之前韩欧巴讲js，我感觉不是很懂，就很排斥它，很沮丧…甚至和很多同学开玩笑说我要退学了，感觉自己不是走前端这条路的，不过同学都很耐心的劝我不要放弃，说会帮助我，我心底还是很happy的…所以我会">
+<meta property="og:updated_time" content="2015-11-27T13:49:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="琦小琦的小窝">
-<meta name="twitter:description" content="记录学习的点滴">
+<meta name="twitter:title" content="JavaScript基础之作用域解析">
+<meta name="twitter:description" content="最近这些天都在搞博客，韩欧巴并没有讲什么新的知识点，所以感觉挺轻松的，没有什么学习压力，过得挺舒服（感觉现在说舒服好不合时宜啊）…今天终于讲了一些新的JS知识。其实，我对js一直都挺害怕的，害怕自己学不好，之前韩欧巴讲js，我感觉不是很懂，就很排斥它，很沮丧…甚至和很多同学开玩笑说我要退学了，感觉自己不是走前端这条路的，不过同学都很耐心的劝我不要放弃，说会帮助我，我心底还是很happy的…所以我会">
   
     <link rel="alternative" href="/atom.xml" title="琦小琦的小窝" type="application/atom+xml">
   
@@ -242,9 +243,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-JavaScript基础之作用域解析" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JavaScript基础之作用域解析" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/11/27/JavaScript基础之作用域解析/" class="article-date">
@@ -260,12 +259,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/JavaScript基础之作用域解析/">JavaScript基础之作用域解析</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript基础之作用域解析
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -307,240 +313,62 @@ console.<span class="built_in">log</span>(<span class="built_in">i</span>);
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/11/27/JavaScript基础之基本概念/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript基础之基本概念</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JavaScript基础之作用域解析" data-title="JavaScript基础之作用域解析" data-url="http://yoursite.com/2015/11/27/JavaScript基础之作用域解析/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-  
-    <article id="post-JavaScript基础之基本概念" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/27/JavaScript基础之基本概念/" class="article-date">
-  	<time datetime="2015-11-27T13:08:01.000Z" itemprop="datePublished">2015-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/JavaScript基础之基本概念/">JavaScript基础之基本概念</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>纯属自己整理，如有错误，欢迎在留言板指出</strong></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-CSS的知识点梳理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/27/CSS的知识点梳理/" class="article-date">
-  	<time datetime="2015-11-27T13:03:50.000Z" itemprop="datePublished">2015-11-27</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/27/CSS的知识点梳理/">CSS的知识点梳理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>纯属自己整理，如有错误，欢迎在留言板指出</strong></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-HTML的知识点梳理" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/26/HTML的知识点梳理/" class="article-date">
-  	<time datetime="2015-11-26T01:30:30.000Z" itemprop="datePublished">2015-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/26/HTML的知识点梳理/">HTML的知识点梳理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>纯属自己整理，如有错误，欢迎在留言板指出</strong></p>
-<blockquote>
-<h2 id="编辑器">编辑器</h2></blockquote>
-<p>目前为止我只接触了一个Sublime Text这个编辑器,没有安装任何插件，都是手动敲代码，以后还会接触一些其他的编辑器，我很期待哟～</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/26/HTML的知识点梳理/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-呆萌小程序媛之日常" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/25/呆萌小程序媛之日常/" class="article-date">
-  	<time datetime="2015-11-25T12:16:55.000Z" itemprop="datePublished">2015-11-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/25/呆萌小程序媛之日常/">呆萌小程序媛之日常</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>嘿嘿…第一篇正儿八经的博客，先随便分享点心情。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/25/呆萌小程序媛之日常/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -564,8 +392,8 @@ console.<span class="built_in">log</span>(<span class="built_in">i</span>);
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
