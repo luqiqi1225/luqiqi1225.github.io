@@ -303,7 +303,37 @@ c = <span class="function"><span class="keyword">function</span><span class="par
 fn();
 console.<span class="built_in">log</span>(<span class="built_in">i</span>);
 </code></pre><p>*在js中都是全局作用域，if、for里也是全局作用域，只有函数中的才是局部作用域。</p>
+<p>*关于局部变量和全局变量：</p>
+<p>1、全局变量可以在任何地方访问；</p>
+<p>2、函数内部的变量，对外部是不可见的；</p>
+<p>3、函数内部可以访问外部函数的变量；</p>
+<p>4、局部变量指的是在函数内部的声明。</p>
+<blockquote>
+<p>④函数的类型</p>
+</blockquote>
+<p>1、声明函数（函数声明），就是使用function关键字 + 函数名声明的函数。</p>
+<pre><code>function <span class="function"><span class="keyword">fn</span></span>(){
+    <span class="comment">//do sth.</span>
+}
+<span class="function"><span class="keyword">fn</span></span>();
+</code></pre><p>2、函数表达式，就是使用function关键字，没有函数名，赋值给一个变量的函数。</p>
+<pre><code><span class="keyword">var</span> fn = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+    <span class="comment">//do sth.</span>
+}();
+<span class="comment">//fn();</span>
+</code></pre><p>3、匿名函数，就是使用function关键字但是没有函数名的函数。</p>
+<pre><code><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">{
+    //do sth.
+}</span>)</span><span class="list">()</span><span class="comment">;</span>
+</code></pre><p>*区别：函数表达式可以使用（）操作符，立即执行；声明函数不可以；</p>
+<p>*（）（）；第一个（）把匿名函数定义成函数表达式，第二个（）表示立即执行。</p>
+<h5 id="关于return返回值：每个function函数都有默认的return返回值，就是undefined。">关于return返回值：每个function函数都有默认的return返回值，就是undefined。</h5><pre><code><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>{
+    <span class="built_in">console</span>.log(<span class="string">'hello world'</span>);
 
+    <span class="comment">//有默认的返回值，undefined</span>
+}
+<span class="built_in">console</span>.log(fn());<span class="comment">//打印出来看看返回值</span>
+</code></pre>
       
     </div>
     
