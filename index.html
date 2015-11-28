@@ -385,62 +385,6 @@
 
 <span class="number">3</span>、link外部样式引入。
 </code></pre><p>*有冲突的样式，标签内部的引入方式高于style标签的引入方式。</p>
-<p>①div样式</p>
-<p>width:标签元素的宽度</p>
-<p>height:标签元素的高度</p>
-<p>background-color:背景颜色</p>
-<p>background-image:背景图片</p>
-<p>background-repeat:是否平铺</p>
-<p>background-position:位置</p>
-<p>②边框样式（border）</p>
-<p>border-style:solid/dotted/dashed/double 实线/点状线/虚线//</p>
-<p>边框样式，没有默认值</p>
-<p>border-color:默认颜色值是字体颜色，默认的字体颜色是黑色</p>
-<p>border-width:默认值是3px的宽度，数值不能为负数</p>
-<p>border:10px red groove 3D凹槽边框，有兼容性问题，火狐支持的很好</p>
-<p>border:10px red ridge 3D垄状边框，有兼容性问题，火狐支持的很好</p>
-<p>border:inside outside</p>
-<p>③内边距（padding）</p>
-<p>“TRBL”法则：top、right、bottom、left</p>
-<p>padding不可以用于background，因为背景有自己的position，可以用于文字、标签。</p>
-<blockquote>
-<h3 id="选择器及优先级">选择器及优先级</h3></blockquote>
-<p>①标签选择器：直接作用于选择的标签元素，是一个集合</p>
-<pre><code><span class="keyword">div</span>{
-    <span class="comment">//do sth</span>
-}
-</code></pre><p>②ID选择器：直接作用于叫该名称的标签元素，名称是唯一的，标签也是唯一的，只对该名称标签有效</p>
-<pre><code><span class="id">#box</span>{
-    <span class="comment">//do sth</span>
-}
-</code></pre><p>③父子选择器：又叫层级选择器</p>
-<p>层级选择器用空格隔开，有顺序，生效最里面的子集。<br>例：</p>
-<pre><code><span class="tag">body</span> <span class="class">.box</span> <span class="id">#duan</span>{
-    <span class="comment">//do sth</span>
-}
-</code></pre><p>④类选择器：</p>
-<pre><code>.<span class="keyword">class</span>{
-    <span class="comment">//do sth</span>
-}
-</code></pre><p>⑤群组选择器：用’，‘隔开，无顺序可言</p>
-<p>div,.box,#box1{<br>    //do sth<br>}</p>
-<p>⑥通配选择器</p>
-<pre><code><span class="comment">*{</span>
-    <span class="comment">//do sth</span>
-}
-</code></pre><blockquote>
-<h3 id="浮动布局">浮动布局</h3></blockquote>
-<p>float : left / right / none; 向左浮/向右浮/默认值（不浮）</p>
-<h4 id="清除浮动的几种方法：">清除浮动的几种方法：</h4><p>1、给浮动元素的父级添加内容高度；</p>
-<p>2、给浮动元素的父级添加overflow：hidden；必备条件是有宽度或者高度，需要设置宽或高，但是有高度的话，就不需要设置overflow：hidden了；</p>
-<p>3、在浮动元素的下方，同级关系的标签元素设置clear：left/right/both；需要添加额外标签来清楚浮动。</p>
-<blockquote>
-<h3 id="position位置(三种类型)">position位置(三种类型)</h3></blockquote>
-<p>1、relative 相对定位：对标签没有属性改变，设置left/right/top/bottom方向可以偏移位置；有z-index的级别样式，默认后面标签元素覆盖前面元素。</p>
-<p>2、absolute 绝对定位：对标签元素有属性改变(变成inline-block属性)；脱离文档流；float无效；有清楚浮动的效果；内容撑开宽度、高度；有z-index层级样式；margin：0 auto 无效；默认后面标签元素覆盖前面元素；以父级标签设置relative或者absolute属性后为方向起点；没有父级设置，以body左上角为方向起点.</p>
-<p>3、fixed 固定定位：类似于绝对定位，有改变元素属性；方向固定后，是以浏览器窗口定位；不会因为html文档滚动而改变位置，可以用百分比（width:100%,height:100%）</p>
-<p><strong>这三种类型，大部分以布局为主</strong></p>
-
       
     </div>
     
@@ -449,6 +393,10 @@
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/11/27/CSS的知识点梳理/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
