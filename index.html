@@ -246,6 +246,101 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-JavaScript的数据类型及其转换" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/05/JavaScript的数据类型及其转换/" class="article-date">
+  	<time datetime="2015-12-05T12:40:28.000Z" itemprop="datePublished">2015-12-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/05/JavaScript的数据类型及其转换/">JavaScript的数据类型的转换及判断</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>沉寂好久，今天我来更博啦～博主最近学js学到头昏脑涨…所以也没有顾及到博客，虽然可能也没啥人来看偶滴博客，但是！如果你们来了，请留下你们的脚印，让我知道你们来过..hahaha…自嗨结束，开始进入正题↓</p>
+<h3 id="JS的数据类型：简单的数据类型&amp;复杂的数据类型">JS的数据类型：简单的数据类型&amp;复杂的数据类型</h3><h4 id="简单的数据类型：">简单的数据类型：</h4><p>string 字符串类型</p>
+<p>var str = ‘123’;</p>
+<p>Boolean 布尔类型</p>
+<p>var switch = true;<br>var switch = false;</p>
+<p>Number 数字类型</p>
+<p>var num = 1; </p>
+<p>Null 空类型，表示一个空对象,</p>
+<p>作用：一般用来保存值或清空（对象）的</p>
+<p>undefined 未定义类型</p>
+<h4 id="复杂的数据类型：">复杂的数据类型：</h4><p>object 对象类型</p>
+<p>var obj = {</p>
+<p>}</p>
+<p>Array 数组</p>
+<p>var arr = [];</p>
+<p>function 函数</p>
+<p>var fu = function(){<br>    //do sth;<br>}</p>
+<h3 id="Boolean()转换">Boolean()转换</h3><p>boolean：true（1）/false（0）</p>
+<p>str:true(任何非空字符串)/false（空字符串）</p>
+<p>number:true(任何非0数字)/false（0和Nan（非数值））</p>
+<p>object：true（任何对象）/false（null）</p>
+<p>undefined：true（n/a不适用）/false（undefined）</p>
+<p>*数值类型：有整数和浮点数，有最大值和最小值，超出范围显示正负无穷，不要用浮点数作对比</p>
+<p>*Nan表示一个特殊的数值，不和任何数值对等，包括自己</p>
+<p>*isNan（）;用于判断是否为数值</p>
+<h4 id="转换成字符串类型：">转换成字符串类型：</h4><p>①String()；可以用于任何类型</p>
+<p>②toString();不能用于null和NaN，其他可用</p>
+<h4 id="数据类型的判断">数据类型的判断</h4><p>简单的数据类型用typeof来检测，复杂的数据类型用instanceof来判断</p>
+<p>instanceof主要针对function、object、array、new Number()、new String()、new Boolean()等复杂的数据类型判断，它还能判断它的继承方向。</p>
+<p>例：</p>
+<p>var str = ‘123’;//字面量</p>
+<p>等同于：</p>
+<p>var str = new String(‘123’);//构建一个字符串对象</p>
+<p>console.log(typeof str);//结果：String类型</p>
+<p>var arr = [1,2,3,4];</p>
+<p>var obj = {<br>    a:10,<br>    b:20<br>};</p>
+<p>var fn = function(){<br>    //do sth;<br>}();</p>
+<p>下面我们来用instanceof检测它们：</p>
+<p>console.log(str instanceof String);//false </p>
+<p>这里可以理解为：str是否引用自String//不是</p>
+<p>String是简单的数据类型，不可用instanceof来判断，只能用typeof来检测：console.log(typeof str)</p>
+<p>console.log(arr instanceof Object);//true</p>
+<p>console.log(fn3 instanceof function);//true</p>
+<p>console.log(fn3 instanceof Object);//true</p>
+<p>console.log(obj instanceof Object);//true</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-JavaScript基础之作用域解析" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
