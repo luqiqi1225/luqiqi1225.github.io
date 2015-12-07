@@ -273,78 +273,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>今天又是新的一周的开始，感觉时间过得好快又好慢…对于未知的将来，既期待又担忧…今天是来这学习的第47天，往后老师讲的知识点应该是越来越难了吧，希望自己可以好好的把该掌握的知识点掌握了，不期望自己能够多厉害，只要能跟上老师的步伐就ok，怀挺～～～～～</p>
-<h3 id="1、原型">1、原型</h3><p>①prototype 原型，当前函数的原型；</p>
-<p>所有的函数都有prototype属性，该属性是一个对象，</p>
-<p>作用：是给当前函数增加属性的</p>
-<p>假如这个函数没有任何属性的话，prototype对象，默认有个construction属性，该属性指向当前函数本身</p>
-<pre><code><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span><span class="comment">{
-    console.log(fn.prototype);
-}</span>
-<span class="title">fn</span><span class="params">()</span>;</span>
-
-可以打印出一个fn<span class="comment">{}</span>对象，里面包含了一个默认属性construction：<span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span><span class="comment">{}</span>，指向当前函数本身,里面包含<span class="title">prototype</span>对象（当前函数的原型）；和一个__<span class="title">proto__</span>:</span><span class="keyword">Object</span>；以及一些其他的属性
-</code></pre><p>construction：function fn(){}，指向当前函数本身，我们来验证一下：</p>
-<pre><code><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span><span class="comment">{
-console.log(fn.prototype.constructor);
-}</span>
-<span class="title">fn</span><span class="params">()</span>;</span>
-
-可以打印出一个结果：<span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span>;</span>
-</code></pre><p>②<strong>proto</strong> 也叫原型，指向创建当前函数对象的函数prototype；</p>
-<p>所有的对象都有<strong>proto</strong>属性。</p>
-<p>下面来看一个例子：</p>
-<pre><code><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>{
-    fn.prototype.name = <span class="string">'xiaoqiqi'</span>;
-    fn.prototype.age = <span class="number">18</span>;
-    fn.prototype.star = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-        <span class="comment">// return '10';</span>
-        <span class="built_in">console</span>.log(<span class="string">'123'</span>);
-    }
-}
-<span class="keyword">var</span> fn2 = <span class="keyword">new</span> fn();<span class="comment">//从fn方法里面new出一个实例；生成对象fn2，所有的对象都有__proto__属性；所有的函数都有prototype属性;这里的fn2继承父级fn里的所有内容；</span>
-<span class="comment">// fn2.__proto__.sex = '男';//通过__proto__给fn2里增加一个sex属性，父级里也增加了，这个sex属性在__proto__里；破坏了原生链，原生的__proto__里面的内容也增加了；一般不推荐</span>
-fn2.age = <span class="number">20</span>;<span class="comment">//给new出来的新的对象fn2里的age属性改变内容（用fn2.age=20改变的话 只是改变的fn2里的age，fn里的并不会受到影响）</span>
-<span class="built_in">console</span>.log(fn2.age);<span class="comment">//查看属性age的内容；(这时如果用父级fn.age来查看是undefined)</span>
-<span class="built_in">console</span>.log(fn.prototype);<span class="comment">//查看父级里的所有属性内容（要通过prototype;在这里我的理解是 把prototype当成函数fn下的一个装属性的容器，它是一个对象，里面有__proto__属性，它也是一个对象，是指向创建当前函数【这时这个函数变成了一个对象】prototype）</span>
-<span class="built_in">console</span>.log(<span class="keyword">typeof</span> fn2);<span class="comment">//object</span>
-<span class="built_in">console</span>.log(fn2.__proto__ === fn.prototype);<span class="comment">//true</span>
-</code></pre><h3 id="2、this">2、this</h3><p>①函数声明、匿名函数、函数表达式在全局中调用，this指向window</p>
-<pre><code><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">{
-    console.log<span class="list">(<span class="keyword">this</span>)</span><span class="comment">;//在全局作用域下面调用this，this指向global，也就是window</span>
-}</span>)</span><span class="list">()</span><span class="comment">;</span>
-</code></pre><p>②new关键词构造的对象，this指向创建该对象的函数(这里的函数变成了一个对象)</p>
-<pre><code><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-<span class="keyword">this</span>.x = <span class="number">10</span>;
-<span class="keyword">this</span>.y = <span class="number">10</span>;
-
-<span class="built_in">console</span>.log(<span class="keyword">this</span>);<span class="comment">//fn1{x:10,y:10}(这里的this指的fn1，这时fn1不是函数，变成了一个对象)</span>
-}
-<span class="keyword">var</span> fn2 = <span class="keyword">new</span> fn1();<span class="comment">//fn2是由fn1 new出来的一个对象</span>
-<span class="built_in">console</span>.log(fn1);<span class="comment">//在全局中打印fn1，fn1还是函数本身</span>
-</code></pre><p>③this当前的函数为对象属性的时候，this指向该对象</p>
-<pre><code><span class="keyword">var</span> obj = {
-x:<span class="number">10</span>,
-y:<span class="number">20</span>,
-fn1:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-    <span class="keyword">this</span>.x = <span class="number">20</span>;
-    <span class="built_in">console</span>.log(<span class="keyword">this</span>);<span class="comment">//Object{x:20,y:20}(这时候this指的是obj这个对象)</span>
-    }
-}
-obj.fn1();
-<span class="built_in">console</span>.log(obj.x);<span class="comment">//20</span>
-</code></pre><p>再来看一个例子：</p>
-<pre><code><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
-<span class="built_in">console</span>.log(<span class="keyword">this</span>);
-<span class="keyword">this</span>.x = <span class="number">10</span>;
-<span class="keyword">this</span>.y = <span class="number">20</span>;
-}
-fn1();
-<span class="built_in">console</span>.log(<span class="built_in">window</span>.x);
-
-<span class="comment">//这里的this指的是window，因为fn1()在全局中运行，所有这里的this指的是window</span>
-</code></pre><p><strong>this肯定是指向的一个对象</strong><br><strong>一般在函数内部使用this</strong><br><strong>基础数据的属性不会报错，是undefined</strong></p>
-<p><strong>如果有错误，欢迎在留言板指出哟</strong></p>
-
       
     </div>
     
@@ -353,6 +281,10 @@ fn1();
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/07/JavaScript原型/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
