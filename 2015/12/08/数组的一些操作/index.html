@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>数组的一些操作 | 琦小琦的小窝</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组的一些操作">
+<meta property="og:url" content="http://yoursite.com/2015/12/08/数组的一些操作/index.html">
+<meta property="og:site_name" content="琦小琦的小窝">
+<meta property="og:description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
+<meta property="og:updated_time" content="2015-12-08T13:15:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数组的一些操作">
+<meta name="twitter:description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
+  
+    <link rel="alternative" href="/atom.xml" title="琦小琦的小窝" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xozpo.com1.z0.glb.clouddn.com/sister.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">陆琦</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">走在前端的路上...</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="/#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://hanmingyang.github.io/">韩欧巴</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://chumengxing1121.github.io/">小褚的梦想星世界</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://wj1213180604.github.io/">逸仙于誓</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zhuqy.github.io/">如鲸向海</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://changxiangru.github.io/">常相如</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zoeyzhou.github.io/">zoey</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://twiceyuan.com/">twiceyuan</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://gcsHaya.github.io/">草堂子</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://sh5054.github.io/">麻酱_killer</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://athenachu.github.io/">爱茵如梦</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://crerich.github.io/"">华仔</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://quangege.github.io/">小世界</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://sundyfuther.github.io/">Sundyfuther</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://quanquanxuan.github.io/">两面三道</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://baobeiaini.github.io/">千城雪</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://tyl1002353363.github.io/">不羁放纵爱自由</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://yamanai.github.io/">键盘人生</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://lck297231489.github.io/">上海滩--新生的开始</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://tavey.github.io/">lich.king.Tavey</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zgmn.github.io/">把技术溜起</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://running11.github.io/">无限挑战</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://haomark.github.io/">一蓑烟雨任平生</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://jameblunt1973.github.io/">帅的拖网速</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://bairuoqing666.github.io/">闻鸡起舞快手客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zy8232003.github.io/">Memory</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://weibo0909.github.io/">Sunday</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://tang0916tang.github.io/">小翊</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://niexiaofei1988.github.io/">Crazy tired</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://xuyanchao.github.io/">De Marcia</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://samguoqiang.github.io/">Janmdi</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://aoyi551083.github.io/">Looking to the future</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">不必仰望别人，自己亦是风景</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">陆琦</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xozpo.com1.z0.glb.clouddn.com/sister.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">陆琦</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">走在前端的路上...</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="/#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="/#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-数组的一些操作" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/08/数组的一些操作/" class="article-date">
+  	<time datetime="2015-12-08T11:09:24.000Z" itemprop="datePublished">2015-12-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数组的一些操作
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，但是真的智商有限嘛，怪我咯？…</p>
+<a id="more"></a>
+<h3 id="①join()">①join()</h3><p>join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串</p>
+<p>下面我们来看个实例</p>
+<pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>]
+
+var <span class="built_in">str</span> = <span class="string">''</span>
+<span class="built_in">str</span> = arr.<span class="built_in">join</span>(<span class="string">'|'</span>);
+console.<span class="built_in">log</span>(<span class="built_in">str</span>);
+<span class="built_in">str</span> = arr.<span class="built_in">join</span>();<span class="comment">//不传参 直接返回一个字符串（不传参是一种快捷的把数组转换成字符串的方式）</span>
+console.<span class="built_in">log</span>(<span class="built_in">str</span>);
+console.<span class="built_in">log</span>(typeof <span class="built_in">str</span>);    
+</code></pre><p>输出：</p>
+<pre><code><span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">4</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">8</span>
+<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>
+<span class="built_in">string</span>
+</code></pre><h3 id="②pop()">②pop()</h3><p> pop()方法:用于删除数组中的最后一个元素并返回该元素,无需参数。</p>
+<p> 说明：pop()方法将删除数组的最后一个元素，把数组长度减一，并且返回它删除的元素的值。如果数组已经为空，则pop()不改变数组，并返回undefined值。</p>
+<p>下面我们来看一些实例</p>
+<p>实例1、</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">'abc'</span>];
+<span class="built_in">console</span>.log(arr.pop(<span class="string">'abc'</span>),arr);<span class="comment">//删除的是abc这个字符串</span>
+</code></pre><p>输出：</p>
+<pre><code>abc [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>]
+</code></pre><p>实例2、</p>
+<pre><code>var arr = []<span class="comment">;</span>
+console.log(arr.pop())<span class="comment">;</span>
+</code></pre><p>输出：</p>
+<pre><code><span class="literal">undefined</span>
+</code></pre><p>实例3、</p>
+<pre><code>var arr = [<span class="number">1</span>];
+console.<span class="built_in">log</span>(arr.pop());<span class="comment">//弹出1，arr为空数组</span>
+</code></pre><p>输出：</p>
+<pre><code><span class="number">1</span>
+</code></pre><h3 id="③shift()">③shift()</h3><p>shift()方法：(与pop()相反)移除数组中的第一个元素，并返回第一个元素的值。</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">shift</span><span class="params">()</span></span>
+</code></pre><p>说明：如果数组是空的，那么shift()将不进行任何操作，返回undefined。注意，该方法不创建新数组，而是直接修改原有的arrayObject.该方法会改变数组的长度</p>
+<p>下面我们来看一个实例</p>
+<pre><code>var arr = [<span class="number">1,2,3,4</span>,5,6,8,'abc']<span class="comment">;</span>
+console.log(arr.shift(),arr)<span class="comment">;</span>
+</code></pre><p>输出：</p>
+<pre><code><span class="number">1</span> [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">"abc"</span>]
+</code></pre><h3 id="④push()">④push()</h3><p>push()方法：可向数组的末尾添加一个或更多元素，并返回新的长度。</p>
+<p>语法：arrayObject.push(*newelement1,newelement2,….,newelementX)<br>参数newelement1是必需的，要添加到数组的第一个元素；</p>
+<p>参数newelement2是可选的，要添加到数组的第二个元素；</p>
+<p>参数newelement1是可选的，可添加多个元素。</p>
+<p>返回值：把指定的值添加到数组后的新长度。</p>
+<p>说明：push()方法可把它的参数顺序添加到 arrayObject 的尾部。它直接修改 arrayObject，而不是创建一个新的数组。push() 方法和 pop() 方法使用数组提供的先进后出栈的功能。注意，该方法会改变数组的长度。</p>
+<p>下面我们来看一个实例</p>
+<pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>];
+console.<span class="built_in">log</span>(arr.push(<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>),arr);
+</code></pre><p>输出：</p>
+<pre><code><span class="number">11</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]
+</code></pre><h3 id="⑤sort()">⑤sort()</h3><p>sort()方法：用于对数组的元素进行排序</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">sort</span><span class="params">(sortby)</span></span>
+</code></pre><p>参数sortby,可选。规定排序顺序，必须是函数。</p>
+<p>返回值：对数组的引用。注意，数组在原数组上进行排序，不生成副本。</p>
+<p>说明：如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。</p>
+<p>如果想按照其他标准进行排序，就需要提供比较函数（这个函数可以写在外面），该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：</p>
+<pre><code>*若 <span class="tag">a</span> 小于 b，在排序后的数组中 <span class="tag">a</span> 应该出现在 <span class="tag">b</span> 之前，则返回一个小于 <span class="number">0</span> 的值。
+*若 <span class="tag">a</span> 大于 b，则返回一个大于 <span class="number">0</span> 的值。
+*若 <span class="tag">a</span> 等于 b，则返回 <span class="number">0</span>。
+</code></pre><p>下面我们来看一个模板：</p>
+<pre><code>var arr = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">100</span>];
+console.<span class="built_in">log</span>(arr.sort(fn));
+<span class="function">function <span class="title">fn</span><span class="params">(a,b)</span></span>{<span class="comment">//这里的a,b参数必须要写的，表示数组里的任意两个数值</span>
+<span class="keyword">return</span> a-b;<span class="comment">//大于0（b在a的前面），小于0（a在b的前面），等于0的（有兼容问题）。</span>
+<span class="keyword">return</span> b-a;<span class="comment">//大于0（a在b的前面），小于0（b在a的前面），等于0的（有兼容问题）。</span>
+}
+<span class="comment">// a-b 输出从小到大排序，b-a 输出从大到小排序</span>
+</code></pre><h3 id="⑥reverse()">⑥reverse()</h3><p>reverse()方法:用于颠倒数组中元素的顺序(逆序排序)。</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">reverse</span><span class="params">()</span></span>
+</code></pre><p>注意：该方法会改变原来的数组，而不会创建新的数组。</p>
+<p>下面我们来看一个实例</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'f'</span>,<span class="string">'h'</span>];
+<span class="built_in">console</span>.log(arr.reverse());
+</code></pre><p>输出：</p>
+<pre><code>[<span class="string">"h"</span>,<span class="string">"f"</span>,<span class="string">"c"</span>,<span class="string">"b"</span>,<span class="string">"a"</span>]
+</code></pre><p>⑦slice()</p>
+<p>slice()方法：该方法可从指定的数组中返回选定的元素。可用于数组和字符串的操作。</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">slice</span><span class="params">(start,end)</span></span>
+</code></pre><p>参数start，必需参数，规定何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</p>
+<p>参数end,可选参数，规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</p>
+<p>返回值：返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
+<p>注意：该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</p>
+<p>*您可使用负值从数组的尾部选取元素。</p>
+<p>*如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。</p>
+<p>下面我们来看两个实例</p>
+<p>实例1、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+console.<span class="built_in">log</span>(arr.slice(<span class="number">2</span>,<span class="number">6</span>));
+</code></pre><p>输出：</p>
+<pre><code>[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]
+</code></pre><p>实例2、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+console.<span class="built_in">log</span>(arr.slice(-<span class="number">1</span>));
+</code></pre><p>输出：</p>
+<pre><code>[<span class="number">8</span>]
+</code></pre><p>⑧splice()<br>splice()方法：向/从数组中添加/删除项目，然后返回被删除的项目。(该方法会改变原始数组)</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">splice</span><span class="params">(index,howmany,item1,.....,itemX)</span></span>
+</code></pre><p>参数index，是必需的。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。</p>
+<p>参数howmany，是必需的。要删除的项目数量。如果设置为 0，则不会删除项目。</p>
+<p>参数item1, …, itemX，可选参数，非必须，向数组添加的新项目。</p>
+<p>返回值：Array，包含被删除项目的新数组，如果有的话。</p>
+<p>注意：splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</p>
+<p>如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。</p>
+<p>*请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。</p>
+<p>下面我们来看几个实例</p>
+<p>实例1、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+var arr2;
+arr2 = arr.splice(<span class="number">2</span>);
+console.<span class="built_in">log</span>(arr2,arr);
+</code></pre><p>输出：</p>
+<pre><code>[<span class="link_label">2,3,4,5,6,7,8</span>][<span class="link_reference">0,1</span>]
+</code></pre><p>实例2、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+var arr2;
+arr2 = arr.splice(<span class="number">2</span>,<span class="number">4</span>);
+console.<span class="built_in">log</span>(arr2,arr);
+</code></pre><p>输出：</p>
+<pre><code>[<span class="link_label">2,3,4,5</span>][<span class="link_reference">0,1,6,7,8</span>]
+</code></pre><p>实例3、</p>
+<pre><code>var arr = [<span class="number">0,1,2,3</span>,<span class="number">4,5,6,7</span>,8]<span class="comment">;</span>
+var arr2<span class="comment">;</span>
+arr2 = arr.splice(2,4，'abc','bds')<span class="comment">;</span>
+console.log(arr2,arr)<span class="comment">;</span>
+</code></pre><p>输出：</p>
+<pre><code>[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>][<span class="number">0</span>,<span class="number">1</span>,'abc','bds',<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]
+</code></pre><p>⑨forEach()</p>
+<p>forEach()方法：遍历数组</p>
+<p>具体知识点，博主还木有搞清楚呢，待我搞明白了再来更新～</p>
+<p>题外题：</p>
+<pre><code>var obj = {}
+var num;<span class="comment">//undefined</span>
+<span class="keyword">for</span> (var i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {
+    <span class="comment">//console.log(i);</span>
+    <span class="keyword">if</span> (obj.hehe) {
+        obj.hehe ++;
+    }<span class="keyword">else</span>{
+        obj.hehe = <span class="number">1</span>;
+    }
+}
+console.<span class="built_in">log</span>(obj.hehe);
+</code></pre><p>输出：</p>
+<pre><code><span class="number">10</span>
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/07/字符串的操作/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">字符串的操作</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="数组的一些操作" data-title="数组的一些操作" data-url="http://yoursite.com/2015/12/08/数组的一些操作/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 陆琦
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
