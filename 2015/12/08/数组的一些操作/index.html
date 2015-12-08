@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/08/数组的一些操作/index.html">
 <meta property="og:site_name" content="琦小琦的小窝">
 <meta property="og:description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
-<meta property="og:updated_time" content="2015-12-08T13:22:11.000Z">
+<meta property="og:updated_time" content="2015-12-08T13:30:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组的操作">
 <meta name="twitter:description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
@@ -280,7 +280,7 @@
       
         <p>今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，但是真的智商有限嘛，怪我咯？…</p>
 <a id="more"></a>
-<h3 id="①join()">①join()</h3><p>join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串</p>
+<h3 id="①join()"><strong>①join()</strong></h3><p>join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串</p>
 <p>下面我们来看个实例</p>
 <pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>]
 
@@ -294,7 +294,7 @@ console.<span class="built_in">log</span>(typeof <span class="built_in">str</spa
 <pre><code><span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">4</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">8</span>
 <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>
 <span class="built_in">string</span>
-</code></pre><h3 id="②pop()">②pop()</h3><p> pop()方法:用于删除数组中的最后一个元素并返回该元素,无需参数。</p>
+</code></pre><h3 id="②pop()"><strong>②pop()</strong></h3><p> pop()方法:用于删除数组中的最后一个元素并返回该元素,无需参数。</p>
 <p> 说明：pop()方法将删除数组的最后一个元素，把数组长度减一，并且返回它删除的元素的值。如果数组已经为空，则pop()不改变数组，并返回undefined值。</p>
 <p>下面我们来看一些实例</p>
 <p>实例1、</p>
@@ -312,7 +312,7 @@ console.log(arr.pop())<span class="comment">;</span>
 console.<span class="built_in">log</span>(arr.pop());<span class="comment">//弹出1，arr为空数组</span>
 </code></pre><p>输出：</p>
 <pre><code><span class="number">1</span>
-</code></pre><h3 id="③shift()">③shift()</h3><p>shift()方法：(与pop()相反)移除数组中的第一个元素，并返回第一个元素的值。</p>
+</code></pre><h3 id="③shift()"><strong>③shift()</strong></h3><p>shift()方法：(与pop()相反)移除数组中的第一个元素，并返回第一个元素的值。</p>
 <p>语法：</p>
 <pre><code>arrayObject.<span class="function"><span class="title">shift</span><span class="params">()</span></span>
 </code></pre><p>说明：如果数组是空的，那么shift()将不进行任何操作，返回undefined。注意，该方法不创建新数组，而是直接修改原有的arrayObject.该方法会改变数组的长度</p>
@@ -321,7 +321,7 @@ console.<span class="built_in">log</span>(arr.pop());<span class="comment">//弹
 console.log(arr.shift(),arr)<span class="comment">;</span>
 </code></pre><p>输出：</p>
 <pre><code><span class="number">1</span> [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">"abc"</span>]
-</code></pre><h3 id="④push()">④push()</h3><p>push()方法：可向数组的末尾添加一个或更多元素，并返回新的长度。</p>
+</code></pre><h3 id="④push()"><strong>④push()</strong></h3><p>push()方法：可向数组的末尾添加一个或更多元素，并返回新的长度。</p>
 <p>语法：arrayObject.push(*newelement1,newelement2,….,newelementX)<br>参数newelement1是必需的，要添加到数组的第一个元素；</p>
 <p>参数newelement2是可选的，要添加到数组的第二个元素；</p>
 <p>参数newelement1是可选的，可添加多个元素。</p>
@@ -332,7 +332,7 @@ console.log(arr.shift(),arr)<span class="comment">;</span>
 console.<span class="built_in">log</span>(arr.push(<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>),arr);
 </code></pre><p>输出：</p>
 <pre><code><span class="number">11</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]
-</code></pre><h3 id="⑤sort()">⑤sort()</h3><p>sort()方法：用于对数组的元素进行排序</p>
+</code></pre><h3 id="⑤sort()"><strong>⑤sort()</strong></h3><p>sort()方法：用于对数组的元素进行排序</p>
 <p>语法：</p>
 <pre><code>arrayObject.<span class="function"><span class="title">sort</span><span class="params">(sortby)</span></span>
 </code></pre><p>参数sortby,可选。规定排序顺序，必须是函数。</p>
@@ -350,7 +350,7 @@ console.<span class="built_in">log</span>(arr.sort(fn));
 <span class="keyword">return</span> b-a;<span class="comment">//大于0（a在b的前面），小于0（b在a的前面），等于0的（有兼容问题）。</span>
 }
 <span class="comment">// a-b 输出从小到大排序，b-a 输出从大到小排序</span>
-</code></pre><h3 id="⑥reverse()">⑥reverse()</h3><p>reverse()方法:用于颠倒数组中元素的顺序(逆序排序)。</p>
+</code></pre><h3 id="⑥reverse()"><strong>⑥reverse()</strong></h3><p>reverse()方法:用于颠倒数组中元素的顺序(逆序排序)。</p>
 <p>语法：</p>
 <pre><code>arrayObject.<span class="function"><span class="title">reverse</span><span class="params">()</span></span>
 </code></pre><p>注意：该方法会改变原来的数组，而不会创建新的数组。</p>
@@ -359,8 +359,7 @@ console.<span class="built_in">log</span>(arr.sort(fn));
 <span class="built_in">console</span>.log(arr.reverse());
 </code></pre><p>输出：</p>
 <pre><code>[<span class="string">"h"</span>,<span class="string">"f"</span>,<span class="string">"c"</span>,<span class="string">"b"</span>,<span class="string">"a"</span>]
-</code></pre><p>⑦slice()</p>
-<p>slice()方法：该方法可从指定的数组中返回选定的元素。可用于数组和字符串的操作。</p>
+</code></pre><h3 id="⑦slice()"><strong>⑦slice()</strong></h3><p>slice()方法：该方法可从指定的数组中返回选定的元素。可用于数组和字符串的操作。</p>
 <p>语法：</p>
 <pre><code>arrayObject.<span class="function"><span class="title">slice</span><span class="params">(start,end)</span></span>
 </code></pre><p>参数start，必需参数，规定何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</p>
@@ -380,7 +379,7 @@ console.<span class="built_in">log</span>(arr.slice(<span class="number">2</span
 console.<span class="built_in">log</span>(arr.slice(-<span class="number">1</span>));
 </code></pre><p>输出：</p>
 <pre><code>[<span class="number">8</span>]
-</code></pre><p>⑧splice()<br>splice()方法：向/从数组中添加/删除项目，然后返回被删除的项目。(该方法会改变原始数组)</p>
+</code></pre><h3 id="⑧splice()"><strong>⑧splice()</strong></h3><p>splice()方法：向/从数组中添加/删除项目，然后返回被删除的项目。(该方法会改变原始数组)</p>
 <p>语法：</p>
 <pre><code>arrayObject.<span class="function"><span class="title">splice</span><span class="params">(index,howmany,item1,.....,itemX)</span></span>
 </code></pre><p>参数index，是必需的。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。</p>
@@ -412,8 +411,7 @@ arr2 = arr.splice(2,4，'abc','bds')<span class="comment">;</span>
 console.log(arr2,arr)<span class="comment">;</span>
 </code></pre><p>输出：</p>
 <pre><code>[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>][<span class="number">0</span>,<span class="number">1</span>,'abc','bds',<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]
-</code></pre><p>⑨forEach()</p>
-<p>forEach()方法：遍历数组</p>
+</code></pre><h3 id="⑨forEach()"><strong>⑨forEach()</strong></h3><p>forEach()方法：遍历数组</p>
 <p>具体知识点，博主还木有搞清楚呢，待我搞明白了再来更新～</p>
 <p>题外题：</p>
 <pre><code>var obj = {}
