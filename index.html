@@ -272,7 +272,154 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，但是真的智商有限嘛，怪我咯？…</p>
+        <h3 id="①join（）"><strong>①join（）</strong></h3><p>join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串</p>
+<p>下面我们来看个实例</p>
+<pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>]
+
+var <span class="built_in">str</span> = <span class="string">''</span>
+<span class="built_in">str</span> = arr.<span class="built_in">join</span>(<span class="string">'|'</span>);
+console.<span class="built_in">log</span>(<span class="built_in">str</span>);
+<span class="built_in">str</span> = arr.<span class="built_in">join</span>();<span class="comment">//不传参 直接返回一个字符串（不传参是一种快捷的把数组转换成字符串的方式）</span>
+console.<span class="built_in">log</span>(<span class="built_in">str</span>);
+console.<span class="built_in">log</span>(typeof <span class="built_in">str</span>);    
+</code></pre><p>输出：</p>
+<pre><code><span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">4</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">8</span>
+<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>
+<span class="built_in">string</span>
+</code></pre><h3 id="②pop（）"><strong>②pop（）</strong></h3><p> pop()方法:用于删除数组中的最后一个元素并返回该元素,无需参数。</p>
+<p> 说明：pop()方法将删除数组的最后一个元素，把数组长度减一，并且返回它删除的元素的值。如果数组已经为空，则pop()不改变数组，并返回undefined值。</p>
+<p>下面我们来看一些实例</p>
+<p>实例1、</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">'abc'</span>];
+<span class="built_in">console</span>.log(arr.pop(<span class="string">'abc'</span>),arr);<span class="comment">//删除的是abc这个字符串</span>
+</code></pre><p>输出：</p>
+<pre><code>abc [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>]
+</code></pre><p>实例2、</p>
+<pre><code>var arr = []<span class="comment">;</span>
+console.log(arr.pop())<span class="comment">;</span>
+</code></pre><p>输出：</p>
+<pre><code><span class="literal">undefined</span>
+</code></pre><p>实例3、</p>
+<pre><code>var arr = [<span class="number">1</span>];
+console.<span class="built_in">log</span>(arr.pop());<span class="comment">//弹出1，arr为空数组</span>
+</code></pre><p>输出：</p>
+<pre><code><span class="number">1</span>
+</code></pre><h3 id="③shift（）"><strong>③shift（）</strong></h3><p>shift()方法：(与pop()相反)移除数组中的第一个元素，并返回第一个元素的值。</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">shift</span><span class="params">()</span></span>
+</code></pre><p>说明：如果数组是空的，那么shift()将不进行任何操作，返回undefined。注意，该方法不创建新数组，而是直接修改原有的arrayObject.该方法会改变数组的长度</p>
+<p>下面我们来看一个实例</p>
+<pre><code>var arr = [<span class="number">1,2,3,4</span>,5,6,8,'abc']<span class="comment">;</span>
+console.log(arr.shift(),arr)<span class="comment">;</span>
+</code></pre><p>输出：</p>
+<pre><code><span class="number">1</span> [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="string">"abc"</span>]
+</code></pre><h3 id="④push（）"><strong>④push（）</strong></h3><p>push()方法：可向数组的末尾添加一个或更多元素，并返回新的长度。</p>
+<p>语法：arrayObject.push(*newelement1,newelement2,….,newelementX)<br>参数newelement1是必需的，要添加到数组的第一个元素；</p>
+<p>参数newelement2是可选的，要添加到数组的第二个元素；</p>
+<p>参数newelement1是可选的，可添加多个元素。</p>
+<p>返回值：把指定的值添加到数组后的新长度。</p>
+<p>说明：push()方法可把它的参数顺序添加到 arrayObject 的尾部。它直接修改 arrayObject，而不是创建一个新的数组。push() 方法和 pop() 方法使用数组提供的先进后出栈的功能。注意，该方法会改变数组的长度。</p>
+<p>下面我们来看一个实例</p>
+<pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>];
+console.<span class="built_in">log</span>(arr.push(<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>),arr);
+</code></pre><p>输出：</p>
+<pre><code><span class="number">11</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]
+</code></pre><h3 id="⑤sort（）"><strong>⑤sort（）</strong></h3><p>sort()方法：用于对数组的元素进行排序</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">sort</span><span class="params">(sortby)</span></span>
+</code></pre><p>参数sortby,可选。规定排序顺序，必须是函数。</p>
+<p>返回值：对数组的引用。注意，数组在原数组上进行排序，不生成副本。</p>
+<p>说明：如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。</p>
+<p>如果想按照其他标准进行排序，就需要提供比较函数（这个函数可以写在外面），该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：</p>
+<pre><code>*若 <span class="tag">a</span> 小于 b，在排序后的数组中 <span class="tag">a</span> 应该出现在 <span class="tag">b</span> 之前，则返回一个小于 <span class="number">0</span> 的值。
+*若 <span class="tag">a</span> 大于 b，则返回一个大于 <span class="number">0</span> 的值。
+*若 <span class="tag">a</span> 等于 b，则返回 <span class="number">0</span>。
+</code></pre><p>下面我们来看一个模板：</p>
+<pre><code>var arr = [<span class="number">10</span>,<span class="number">20</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">100</span>];
+console.<span class="built_in">log</span>(arr.sort(fn));
+<span class="function">function <span class="title">fn</span><span class="params">(a,b)</span></span>{<span class="comment">//这里的a,b参数必须要写的，表示数组里的任意两个数值</span>
+<span class="keyword">return</span> a-b;<span class="comment">//大于0（b在a的前面），小于0（a在b的前面），等于0的（有兼容问题）。</span>
+<span class="keyword">return</span> b-a;<span class="comment">//大于0（a在b的前面），小于0（b在a的前面），等于0的（有兼容问题）。</span>
+}
+<span class="comment">// a-b 输出从小到大排序，b-a 输出从大到小排序</span>
+</code></pre><h3 id="⑥reverse（）"><strong>⑥reverse（）</strong></h3><p>reverse()方法:用于颠倒数组中元素的顺序(逆序排序)。</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">reverse</span><span class="params">()</span></span>
+</code></pre><p>注意：该方法会改变原来的数组，而不会创建新的数组。</p>
+<p>下面我们来看一个实例</p>
+<pre><code><span class="keyword">var</span> arr = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'f'</span>,<span class="string">'h'</span>];
+<span class="built_in">console</span>.log(arr.reverse());
+</code></pre><p>输出：</p>
+<pre><code>[<span class="string">"h"</span>,<span class="string">"f"</span>,<span class="string">"c"</span>,<span class="string">"b"</span>,<span class="string">"a"</span>]
+</code></pre><h3 id="⑦slice（）"><strong>⑦slice（）</strong></h3><p>slice()方法：该方法可从指定的数组中返回选定的元素。可用于数组和字符串的操作。</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">slice</span><span class="params">(start,end)</span></span>
+</code></pre><p>参数start，必需参数，规定何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</p>
+<p>参数end,可选参数，规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</p>
+<p>返回值：返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
+<p>注意：该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</p>
+<p>*您可使用负值从数组的尾部选取元素。</p>
+<p>*如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。</p>
+<p>下面我们来看两个实例</p>
+<p>实例1、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+console.<span class="built_in">log</span>(arr.slice(<span class="number">2</span>,<span class="number">6</span>));
+</code></pre><p>输出：</p>
+<pre><code>[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]
+</code></pre><p>实例2、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+console.<span class="built_in">log</span>(arr.slice(-<span class="number">1</span>));
+</code></pre><p>输出：</p>
+<pre><code>[<span class="number">8</span>]
+</code></pre><h3 id="⑧splice（）"><strong>⑧splice（）</strong></h3><p>splice()方法：向/从数组中添加/删除项目，然后返回被删除的项目。(该方法会改变原始数组)</p>
+<p>语法：</p>
+<pre><code>arrayObject.<span class="function"><span class="title">splice</span><span class="params">(index,howmany,item1,.....,itemX)</span></span>
+</code></pre><p>参数index，是必需的。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。</p>
+<p>参数howmany，是必需的。要删除的项目数量。如果设置为 0，则不会删除项目。</p>
+<p>参数item1, …, itemX，可选参数，非必须，向数组添加的新项目。</p>
+<p>返回值：Array，包含被删除项目的新数组，如果有的话。</p>
+<p>注意：splice() 方法可删除从 index 处开始的零个或多个元素，并且用参数列表中声明的一个或多个值来替换那些被删除的元素。</p>
+<p>如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。</p>
+<p>*请注意，splice() 方法与 slice() 方法的作用是不同的，splice() 方法会直接对数组进行修改。</p>
+<p>下面我们来看几个实例</p>
+<p>实例1、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+var arr2;
+arr2 = arr.splice(<span class="number">2</span>);
+console.<span class="built_in">log</span>(arr2,arr);
+</code></pre><p>输出：</p>
+<pre><code>[<span class="link_label">2,3,4,5,6,7,8</span>][<span class="link_reference">0,1</span>]
+</code></pre><p>实例2、</p>
+<pre><code>var arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];
+var arr2;
+arr2 = arr.splice(<span class="number">2</span>,<span class="number">4</span>);
+console.<span class="built_in">log</span>(arr2,arr);
+</code></pre><p>输出：</p>
+<pre><code>[<span class="link_label">2,3,4,5</span>][<span class="link_reference">0,1,6,7,8</span>]
+</code></pre><p>实例3、</p>
+<pre><code>var arr = [<span class="number">0,1,2,3</span>,<span class="number">4,5,6,7</span>,8]<span class="comment">;</span>
+var arr2<span class="comment">;</span>
+arr2 = arr.splice(2,4，'abc','bds')<span class="comment">;</span>
+console.log(arr2,arr)<span class="comment">;</span>
+</code></pre><p>输出：</p>
+<pre><code>[<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>][<span class="number">0</span>,<span class="number">1</span>,'abc','bds',<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]
+</code></pre><h3 id="⑨forEach（）"><strong>⑨forEach（）</strong></h3><p>forEach()方法：遍历数组</p>
+<p>具体知识点，博主还木有搞清楚呢，待我搞明白了再来更新～</p>
+<p>题外题：</p>
+<pre><code>var obj = {}
+var num;<span class="comment">//undefined</span>
+<span class="keyword">for</span> (var i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {
+    <span class="comment">//console.log(i);</span>
+    <span class="keyword">if</span> (obj.hehe) {
+        obj.hehe ++;
+    }<span class="keyword">else</span>{
+        obj.hehe = <span class="number">1</span>;
+    }
+}
+console.<span class="built_in">log</span>(obj.hehe);
+</code></pre><p>输出：</p>
+<pre><code><span class="number">10</span>
+</code></pre>
       
     </div>
     
@@ -281,10 +428,6 @@
       
       
 
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/08/数组的一些操作/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

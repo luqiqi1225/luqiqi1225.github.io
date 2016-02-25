@@ -5,16 +5,40 @@
   
   <title>数组的操作 | 琦小琦的小窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
+  <meta name="description" content="①join（）join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串
+下面我们来看个实例
+var arr = [1,2,3,4,5,6,8]
+
+var str = &apos;&apos;
+str = arr.join(&apos;|&apos;);
+console.log(str);
+str = arr.join();//不传参 直接返回一个字符串（不传参是一种快捷的把数组转换成字符串的方式）
+console.log">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组的操作">
 <meta property="og:url" content="http://yoursite.com/2015/12/08/数组的一些操作/index.html">
 <meta property="og:site_name" content="琦小琦的小窝">
-<meta property="og:description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
-<meta property="og:updated_time" content="2015-12-08T13:44:57.000Z">
+<meta property="og:description" content="①join（）join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串
+下面我们来看个实例
+var arr = [1,2,3,4,5,6,8]
+
+var str = &apos;&apos;
+str = arr.join(&apos;|&apos;);
+console.log(str);
+str = arr.join();//不传参 直接返回一个字符串（不传参是一种快捷的把数组转换成字符串的方式）
+console.log">
+<meta property="og:updated_time" content="2016-02-25T08:06:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组的操作">
-<meta name="twitter:description" content="今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，">
+<meta name="twitter:description" content="①join（）join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串
+下面我们来看个实例
+var arr = [1,2,3,4,5,6,8]
+
+var str = &apos;&apos;
+str = arr.join(&apos;|&apos;);
+console.log(str);
+str = arr.join();//不传参 直接返回一个字符串（不传参是一种快捷的把数组转换成字符串的方式）
+console.log">
   
     <link rel="alternative" href="/atom.xml" title="琦小琦的小窝" type="application/atom+xml">
   
@@ -278,9 +302,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天博主学习了新的知识点，整理之前我要小小的吐槽一下。韩欧巴今天丢给我们一个难题，博主真的真的实在是无能为力啊…不会啊…表示很痛苦…于是乎，我就找了度娘，然后就写了度娘的，韩欧巴下来看了我滴代码，我提前交代是找的度娘的，他米有说话，估计一会儿回过神来，对我讲：要是现在电脑米有网络，再给你关在一个小黑屋里，你怎么办？怎么就不自己想呢？博主当时心里简直是….(以下省略九个字)。其实我想说，我也想会啊，但是真的智商有限嘛，怪我咯？…</p>
-<a id="more"></a>
-<h3 id="①join（）"><strong>①join（）</strong></h3><p>join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串</p>
+        <h3 id="①join（）"><strong>①join（）</strong></h3><p>join()方法:用于把数组中的所有元素，通过指定的分隔符放入一个字符串</p>
 <p>下面我们来看个实例</p>
 <pre><code>var arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>]
 
