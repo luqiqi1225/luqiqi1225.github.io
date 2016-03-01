@@ -246,6 +246,88 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-javascript之数据类型（补充）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/01/javascript之数据类型（补充）/" class="article-date">
+  	<time datetime="2016-03-01T11:22:59.000Z" itemprop="datePublished">2016-03-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/01/javascript之数据类型（补充）/">javascript之数据类型（补充）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript的数据类型">JavaScript的数据类型</h1><p>JavaScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String。还有1种复杂数据类型–Object，Object本质上是由一组无序的名值组成的。</p>
+<h2 id="typeof操作符">typeof操作符</h2><p>介于Javascript是松散类型的，因此需要有一种手段来检测给定变量的数据类型–typeof就是负责提供者方面信息的操作符。对一个值使用typeof操作符可能返回下列某个字符串：</p>
+<ul>
+<li>undefined ——如果这个值未定义</li>
+<li>boolean ——如果这个值是布尔值</li>
+<li>string ——如果这个值是字符串</li>
+<li>number ——如果这个值是数值</li>
+<li>object ——如果这个值是对象或null</li>
+<li>function ——如果这个值是函数</li>
+</ul>
+<h2 id="Undefined类型">Undefined类型</h2><p>undefined类型只有一个值，即特殊的undefined。在使用var声明变量但未对其加以初始化时，这个变量的值就是undefined，例如：</p>
+<pre><code><span class="keyword">var</span> a;
+<span class="built_in">console</span>.log(a);<span class="comment">//结果是 undefined</span>
+</code></pre><h2 id="Null类型">Null类型</h2><p>null类型是第二个只有一个值的数据类型，这个特殊的值是null。从逻辑角度来看，null值表示一个空对象指针，而这也正是使用typeof操作符检测null时会返回“object”的原因，例如：</p>
+<pre><code><span class="keyword">var</span> b = <span class="literal">null</span>;
+<span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);<span class="comment">//"object"</span>
+</code></pre><p>如果定义的变量准备在将来用于保存对象，那么最好将该变量初始化为null而不是其他值。这样，只要检测null值就可以知道相应的变量是否已经保存了一个对象的引用了，例如：</p>
+<pre><code><span class="keyword">if</span>(b != <span class="literal">null</span>){
+    <span class="comment">//对b对象执行某些操作</span>
+}
+</code></pre><p>实际上，undefined值是派生自null值的，因此ECMA-262规定对它们的相等性测试要返回true。</p>
+<pre><code>alert（<span class="literal">undefined</span> == <span class="literal">null</span>）;<span class="comment">//ture</span>
+</code></pre><p>尽管null和undefined有这样的关系，但它们的用途完全不同。无论在什么情况下都没有必要把一个变量的值显式地设置为undefined，可是同样的规则对null却不适用。换言之，只要意在保存对象的变量还没有真正保存对象，就应该明确的让该变量保存null值。这样不仅可以体现null作为空对象指针的惯例，而且也有助于进一步区分null和undefined。</p>
+<h2 id="String类型">String类型</h2><p>String类型用于表示由0或多个16位Unicode字符组成的字符序列，即字符串。字符串可以由单引号或双引号表示。</p>
+<pre><code><span class="variable"><span class="keyword">var</span> str1</span> = 'hello';
+<span class="variable"><span class="keyword">var</span> str2</span> = <span class="string">"hello"</span>;
+</code></pre><p>任何字符串的长度都可以通过访问其length属性取得</p>
+<pre><code>console.<span class="built_in">log</span>(str1.<span class="built_in">length</span>);<span class="comment">//输出5</span>
+
+
+*本片博客参考自java_my_life
+</code></pre><p><strong>未完待续…</strong></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-CSS的知识点补充" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -746,63 +828,10 @@
 
 
   
-    <article id="post-HTML的知识点梳理" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/11/26/HTML的知识点梳理/" class="article-date">
-  	<time datetime="2015-11-26T01:30:30.000Z" itemprop="datePublished">2015-11-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/26/HTML的知识点梳理/">HTML的知识点梳理</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>纯属自己整理，如有错误，欢迎在留言板指出</strong></p>
-<blockquote>
-<h2 id="编辑器">编辑器</h2></blockquote>
-<p>目前为止我只接触了一个Sublime Text这个编辑器,没有安装任何插件，都是手动敲代码，以后还会接触一些其他的编辑器，我很期待哟～</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/26/HTML的知识点梳理/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
