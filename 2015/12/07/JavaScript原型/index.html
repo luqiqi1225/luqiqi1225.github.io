@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2015/12/07/JavaScript原型/index.html">
 <meta property="og:site_name" content="琦小琦的小窝">
 <meta property="og:description" content="今天又是新的一周的开始，感觉时间过得好快又好慢…对于未知的将来，既期待又担忧…希望自己可以好好的把该掌握的知识点掌握了，不期望自己能够多厉害，只要能尽自己最大的力学好就ok，怀挺～～～～～">
-<meta property="og:updated_time" content="2016-02-25T08:02:53.000Z">
+<meta property="og:updated_time" content="2016-03-01T09:40:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript原型与this">
 <meta name="twitter:description" content="今天又是新的一周的开始，感觉时间过得好快又好慢…对于未知的将来，既期待又担忧…希望自己可以好好的把该掌握的知识点掌握了，不期望自己能够多厉害，只要能尽自己最大的力学好就ok，怀挺～～～～～">
@@ -319,7 +319,7 @@ fn2.age = <span class="number">20</span>;<span class="comment">//给new出来的
 <pre><code><span class="list">(<span class="keyword">function</span><span class="list">()</span><span class="collection">{
     console.log<span class="list">(<span class="keyword">this</span>)</span><span class="comment">;//在全局作用域下面调用this，this指向global，也就是window</span>
 }</span>)</span><span class="list">()</span><span class="comment">;</span>
-</code></pre><p>②new关键词构造的对象，this指向创建该对象的函数(这里的函数变成了一个对象)</p>
+</code></pre><p>②new关键词构造的对象，this指向构造的新对象</p>
 <pre><code><span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{
 <span class="keyword">this</span>.x = <span class="number">10</span>;
 <span class="keyword">this</span>.y = <span class="number">10</span>;
