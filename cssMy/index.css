@@ -18,7 +18,7 @@ html,body{
 	height: 100%;
 }
 #slider1,#slider2,#slider3,#slider4,#slider5{
-	background: linear-gradient(135deg,rgb(208,100,138),rgb(69,46,78));
+	background: linear-gradient(120deg,rgb(208,100,138),rgb(69,46,78));
 }
 .container{
 	height: 100%;
@@ -44,7 +44,7 @@ html,body{
  	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
  	font-weight: bold;
  	letter-spacing: 20px;
-  	border-radius: 20px;
+  	padding-bottom: 15px;
 }
 .photo h3{
 	font-family: Lato,"Microsoft YaHei",sans-serif;
@@ -52,11 +52,13 @@ html,body{
 	font-weight: bold;
 	font-size: 30px;
 	letter-spacing: 2px;
+	padding-bottom: 10px;
 }
 .photo h4{
 	color: #F1EBE6;
 	font-size: 20px;
-	/*font-weight: bold;*/
+	font-weight: bold;
+	padding-bottom: 10px;
 }
 #icon a{
 	display: inline-block;
@@ -94,8 +96,8 @@ html,body{
  	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
   	font-weight: bold;
   	letter-spacing: 5px;
-  	border-radius: 20px;
-  	/*font-family: Lato,"Microsoft YaHei",sans-serif;*/
+  	/*border-radius: 20px;*/
+  	padding-bottom: 30px;
 }
 #education h3{
 	padding-top: 30px;
@@ -124,7 +126,7 @@ html,body{
  	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
   	font-weight: bold;
   	letter-spacing: 5px;
-  	border-radius: 20px;
+  	/*border-radius: 20px;*/
   	padding-bottom: 30px;
 }
 .skills{
@@ -199,7 +201,7 @@ html,body{
  	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
   	font-weight: bold;
   	letter-spacing: 5px;
-  	border-radius: 20px;
+  	/*border-radius: 20px;*/
   	padding-bottom: 30px;
 }
 #experience h3{
@@ -210,6 +212,7 @@ html,body{
 	color: rgb(238,182,166);
 	font-family: Lato,"Microsoft YaHei",sans-serif;
 	/*font-weight: bold;*/
+	margin: 10px 0px 10px 0px;
 }
 #coding{
 	color: whitesmoke;
@@ -225,8 +228,7 @@ html,body{
  	text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
   	font-weight: bold;
   	letter-spacing: 5px;
-  	border-radius: 20px;
-  	padding-bottom: 10px;
+  	padding-bottom: 35px;
 }
 #underline{
 	width: 90%;
@@ -234,7 +236,7 @@ html,body{
 	border-bottom: 1px solid rgb(208,100,138);
 }
 #about p{
-	padding-top: 50px;
+	/*padding-top: 50px;*/
 	color: antiquewhite;
 	font-size: 18px;
 	font-family: Lato,"Microsoft YaHei",sans-serif;
